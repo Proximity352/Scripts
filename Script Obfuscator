@@ -5,7 +5,7 @@ loadstring(game:HttpGet('https://raw.githubusercontent.com/MainScripts352/MainSc
 ---
 
 function Ioad(id)
- loadstring(game.HttpService:JSONDecode(game:HttpGet(FirebaseURL.."Scripts/"..id..".json")).Script)()
+ loadstring(game.HttpService:JSONDecode(game:HttpGet(FirebaseURL.."Scripts/"..id.."/Script.json")))()
 end
 
 local FileScript, isSupported = pcall(function()
