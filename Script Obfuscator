@@ -1,5 +1,5 @@
 local FirebaseURL = "https://script-obfuscator-default-rtdb.firebaseio.com/"
 
 function Ioad(id)
- loadstring(game.HttpService:JSONDecode(game:HttpGet(FirebaseURL..id..".json")).Scripts.Script)()
+ loadstring(game.HttpService:JSONDecode(game:HttpGet(FirebaseURL.."Scripts/"..id..".json")).Script)()
 end
