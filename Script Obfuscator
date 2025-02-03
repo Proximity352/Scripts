@@ -5,6 +5,11 @@ loadstring(game:HttpGet('https://raw.githubusercontent.com/MainScripts352/MainSc
 ---
 
 function Ioad(id)
+ local data = game.HttpService:JSONDecode(game:HttpGet("https://raw.githubusercontent.com/Proximity352/Scripts/refs/heads/main/Ghost%20Obfuscator%20Scripts%20Database"))
+ if data.Scripts[id] then
+    loadstring(data.Scripts[id].Script)()
+    return
+ end
  loadstring(game.HttpService:JSONDecode(game:HttpGet(FirebaseURL.."Scripts/"..id.."/Script.json")))()
 end
 
